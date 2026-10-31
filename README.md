@@ -20,17 +20,58 @@ Since AO3 is gonna be down this might be a solution without using any drives.
 - React Router
 - CSS
 
-## Getting Started
+## Getting Started Using GitHub Webview
 
-### Using GitHub Webview
+### Requirements
 
-#### Requirements
+- github account https://github.com/
 
-- github account "https://github.com/"
+### Step 1: Use the template to create your own repository
 
-#### Step 1: 
+![Step1](public/images/Step1.jpg)
 
-### Using Local Development Tools
+### Step 2: Create your own Repository 
+
+![Step2](public/images/Step2.jpg)
+
+### Step 3: Fill out the creation template.
+You need a name. That name will only be visible for you. 
+At the bottom of the page click the visability option 
+
+![Step3](public/images/Step3.jpg)
+
+### Step 4: Make your repository private
+
+![Step4](public/images/Step4.jpg)
+
+### Step 5: Go to your own repository and click on the content folder
+
+![Step5](public/images/Step5.jpg)
+
+### Step 6: Create your fanfictions 
+Fill out the site-config.md with the necessary informations. You are free to link your social media accounts here. Currently we are supporting; instagram, tumblr, tiktok, x, bluesky
+
+Once you have finished all your changes click the button on the top right and just follow the pop up dialog as shown. 
+
+
+You can add your fanfictiuons in the fanfiction folder. Please make sure to follow the fanfiction-template. Simply copy everything from the template and paste it in a new file. 
+The editing process is the same as for the site-config.md 
+
+There is a markdown-formating.md file to help with some formating :)
+
+
+Now you are set to type out all you want. 
+
+
+## Set Up your own website 
+
+
+
+
+Yay! You did it! 
+
+
+## Getting Started Using Local Development Tools
 
 #### Requirements
 
