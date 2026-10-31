@@ -42,7 +42,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build
-        run: pnpm build -- --base "${{ steps.pages.outputs.base_path }}"
+        run: pnpm build -- --base=/author-website-template/
+
+      - name: Create SPA fallback
+        run: cp dist/index.html dist/404.html  
 
       - name: Upload build
         uses: actions/upload-pages-artifact@v3
