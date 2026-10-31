@@ -39,7 +39,6 @@ export const siteConfig = {
   title: config.title ?? "",
   description: config.description ?? "",
 
-  contactEmail: config.contactEmail ?? "",
 
   hostingProvider: config.hostingProvider ?? "",
   hostingPrivacyUrl: config.hostingPrivacyUrl ?? "",
@@ -48,5 +47,7 @@ export const siteConfig = {
     instagram: config.instagram ?? "",
     tumblr: config.tumblr ?? "",
     tiktok: config.tiktok ?? "",
+    bluesky: config.bluesky ?? "",
+    x: config.x ?? "",
   },
 };

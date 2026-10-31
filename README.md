@@ -1,75 +1,160 @@
-# React + TypeScript + Vite
+# Fanfiction Website Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable, lightweight website template for fanfiction authors. 
+Since AO3 is gonna be down this might be a solution without using any drives. 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Fanfiction overview** – Display all your published stories.
+- **Story details** – Show story descriptions, metadata, tags and statistics.
+- **Chapter navigation** – Navigate between chapters using previous/next links or the chapter selector.
+- **Customizable configuration** – Manage your author information and social media links in one Markdown file.
+- **Privacy and contact pages** – Includes customizable contact and privacy policy pages.
+- **Responsive design** – Designed to work on desktop and mobile devices.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- React Router
+- CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Using GitHub Webview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#### Requirements
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- github account "https://github.com/"
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+#### Step 1: 
 
+### Using Local Development Tools
+
+#### Requirements
+
+- Node.js (LTS recommended)
+- npm
+
+#### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Navigate into the project folder:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd YOUR_REPOSITORY
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The website will be available at the local URL displayed in your terminal.
+
+## Customization
+
+### 1. Website Configuration
+
+Open `content/site-config.md` and customize your website information:
+
+```md
+---
+author: "Jane Doe"
+title: "Jane's Fanfiction"
+description: "A collection of my fanfiction stories."
+
+instagram: "https://instagram.com/username"
+tumblr: ""
+tiktok: ""
+---
+```
+
+You can change your author name, website title, description and social media links here.
+
+### 2. Adding Fanfiction
+
+Create a new Markdown file inside:
+
+```text
+content/fanfictions/
+```
+
+For example: `my-first-story.md`
+
+Use the following structure:
+
+```md
+---
+title: "My First Fanfiction"
+author: "Jane Doe"
+description: "A story about two lost souls."
+fandom: "Supernatural"
+rating: "Mature"
+warning: "Graphic Depictions Of Violence"
+category: "M/M"
+relationship: "Castiel/Dean"
+language: "English"
+tags: Romance, Angst, Fluff
+published: "2026-01-01"
+words: "1500"
+chapters: "2/2"
+comments: "0"
+kudos: "0"
+bookmarks: "0"
+hits: "0"
+---
+
+<!-- chapter -->
+
+# Chapter 1: The Beginning
+
+Your story starts here.
+
+<!-- chapter -->
+
+# Chapter 2: The Journey
+
+Continue your story here.
+```
+
+Each `<!-- chapter -->` marker separates one chapter from the next.
+
+### 3. Contact and Privacy
+
+The contact page uses the social media links configured in `site-config.md`.
+
+The privacy policy is included as a starting point. Please review and adapt it to your actual hosting provider and website features before publishing.
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The generated files will be available in the `dist/` directory.
+
+You can deploy the website using static hosting providers such as Netlify or GitHub Pages, provided the hosting configuration supports your routing setup.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Contributions
+
+Suggestions, bug reports and improvements are welcome! Feel free to open an issue or submit a pull request.

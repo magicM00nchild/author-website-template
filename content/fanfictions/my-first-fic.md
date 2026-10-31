@@ -1,7 +1,7 @@
 ---
 title: "My First Fanfiction"
 author: "Jane Example"
-summary: "A story about two lost souls."
+description: "A story about two lost souls."
 fandom: "no one knows"
 rating: "Teen"
 status: "completed"
