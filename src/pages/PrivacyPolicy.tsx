@@ -127,13 +127,12 @@ export default function PrivacyPolicy() {
           <li>Lodge a complaint with a data protection authority</li>
         </ul>
 
-        {siteConfig.contactEmail && (
           <p>
             If you have any questions regarding privacy or the
             processing of your personal data, please visit my{" "}
             <a href="/contact">Contact page</a>.
           </p>
-        )}
+    
       </section>
 
       <section>
